@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#000000">
 <title>LEVIS GAME</title>
 <style>
 body{
@@ -548,17 +552,9 @@ if(keyboard_check_pressed(vk_c)){check(player1)}
 if(player1.target!=null){warp_player1()}// it has some targets
 if(player2.target!=null){warp_player2()}// it has some targets
 
-
 let mx = floor(mouse_x/40)*40;
 let my = floor(mouse_y/40)*40;
-/*
-draw_set_color(0,0,255)
-draw_centered_text(20, 20, mx+','+my, 10)
-draw_set_linewidth(2);
-draw_set_linedash([8,2])
-draw_rectangle(mx,my, 40, 40, true,0,0,0)
-draw_set_linedash([])
-*/
+
 
 if(mouse_check_pressed()){
 if(keyboard_check(vk_1)){
@@ -568,7 +564,7 @@ if(keyboard_check(vk_2)){
   player2.x = mx;player2.y = my;player2.dir=12;check(player2)
 }
 }
-document.title = floor(mouse_x)+','+floor(mouse_y)
+
 if(all_dead==true){
 if(mouse_x>266 && mouse_x<366 && mouse_y>425 && mouse_y<455){
 if(mouse_check_pressed()){location.reload()}
